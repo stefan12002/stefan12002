@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+     //Crearea obiectului din lista(poate fi LinkedList sau ArrayList)
+        LinkedList<Integer>listA=new LinkedList<Integer>();
+        //adaugare elemente in lista;
+        int nr;
+        int a=10;
+        Scanner in=new Scanner(System.in);
+        while(a!=0){
+            nr=in.nextInt();
+            listA.add(nr);
+            a--;
+        }
+        //stergere elemente impare din lista
+        listA.removeIf(n->(n%2!=0));
+        for(int i:listA){
+            System.out.print(i+" ");
+        }
+
+
+
+    }
+}
