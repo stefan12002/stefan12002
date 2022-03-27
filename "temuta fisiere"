@@ -18,18 +18,25 @@ public class Main {
         catch(Exception e){
             System.out.println("eroare,nu este de tip String");
         }
-        int a=6;
+        int a=7;
 
             try { while(a!=0){
                 System.out.println("Enter your pin code:");
                 int pinNumber = myObj.nextInt(); //se mai pot folosi nextDouble(), nextFloat(), nextBoolean() - true/false
+                a--;
+                if (a == 0) {
+                    System.out.println("ai incercat de prea multe ori");
+                break;
+                }
                 if (pinNumber == parola) {
                     System.out.println("Pin is: " + pinNumber);
                     System.out.println("logare efectuata cu succes");
+                    break;
                 } else {
                     System.out.println("parola nu este corecta,mai incearca");
                 }
-                a--;
+
+
             }
 
             } catch (Exception e) {
