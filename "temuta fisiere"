@@ -6,9 +6,10 @@ public class Main {
         //date de tip Int pentru codul pin
         //folosim blocuri de tip try-catch
         Scanner myObj = new Scanner(System.in);  // Creeaza un obiect de tip Scanner
-
+        String username="mihai";
+        int parola=123423;
         try {
-            System.out.println("Enter username");
+            System.out.print("Enter username");
 
             String userName = myObj.nextLine();  // Citeste de la utilizator (tastatura)
             System.out.println("Username is: " + userName);  // Afiseaza datele citite
@@ -17,14 +18,24 @@ public class Main {
         catch(Exception e){
             System.out.println("eroare,nu este de tip String");
         }
-        try {
-            System.out.println("Enter your pin code:");
-            int pinNumber = myObj.nextInt(); //se mai pot folosi nextDouble(), nextFloat(), nextBoolean() - true/false
-            System.out.println("Pin is: " + pinNumber);
-        }
-        catch (Exception e){
-            System.out.println("eroare,nu este de tip int");
-        }
+        int a=6;
+
+            try { while(a!=0){
+                System.out.println("Enter your pin code:");
+                int pinNumber = myObj.nextInt(); //se mai pot folosi nextDouble(), nextFloat(), nextBoolean() - true/false
+                if (pinNumber == parola) {
+                    System.out.println("Pin is: " + pinNumber);
+                    System.out.println("logare efectuata cu succes");
+                } else {
+                    System.out.println("parola nu este corecta,mai incearca");
+                }
+                a--;
+            }
+
+            } catch (Exception e) {
+                System.out.println("eroare,nu este de tip int");
+            }
+
 
 
     }
