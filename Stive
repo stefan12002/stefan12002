@@ -1,0 +1,17 @@
+import java.awt.*;
+import java.util.Iterator;
+import java.util.Stack;
+import java.util.Random;
+public class Main {
+    public static void main(String[] args) {
+    
+       Stack<Integer>Stiva1=new Stack<Integer>();
+        Random rand=new Random();
+        int sizeStiva=10;
+        for(int i=0;i<sizeStiva;i++){
+            Stiva1.push(rand.nextInt(100));
+        }
+        System.out.println(Stiva1);
+        
+    }
+}
